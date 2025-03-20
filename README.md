@@ -117,7 +117,7 @@ conda activate dynamicvis
 
 **Step 2**: Install [PyTorch 2.4.x](https://pytorch.org/get-started/previous-versions/).
 
-Linux/Windows:
+Linux:
 
 ```shell
 pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
