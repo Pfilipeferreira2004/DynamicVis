@@ -157,15 +157,6 @@ pip install ipdb -U
 </details>
 
 
-### Install RSRefSeg
-
-Download or clone the RSRefSeg repository.
-
-```shell
-git clone git@github.com:KyanChen/RSRefSeg.git
-cd RSRefSeg
-```
-
 ### Install DynamicVis
 
 Clone the repository:
