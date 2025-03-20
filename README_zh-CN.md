@@ -105,7 +105,7 @@
 
 注解：如果你对 PyTorch 有经验并且已经安装了它，你可以直接跳转到下一小节。否则，你可以按照下述步骤进行准备。
 
-<details open>
+<details>
 
 **步骤 0**：安装 [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install)。
 
@@ -176,7 +176,7 @@ cd DynamicVis
 
 ## 数据准备
 
-<details open>
+<details>
 
 ### 预训练数据集
 
@@ -315,7 +315,7 @@ sh tools_mmpretrain/dist_test.sh configs_DynamicVis/fMoW/name_to_config.py ${CHE
 
 下面是一些除了预训练部分Config参数外的主要参数解析。
 
-<details open>
+<details>
 
 XXX
 
@@ -348,7 +348,7 @@ sh tools_mmpretrain/dist_test.sh configs_DynamicVis/UCMerced/name_to_config.py $
 
 ## 常见问题
 
-<details open>
+<details>
 
 我们在这里列出了使用时的一些常见问题及其相应的解决方案。如果您发现有一些问题被遗漏，请随时提 PR 丰富这个列表。如果您无法在此获得帮助，请使用[issue](https://github.com/KyanChen/DynamicVis/issues)来寻求帮助。请在模板中填写所有必填信息，这有助于我们更快定位问题。
 

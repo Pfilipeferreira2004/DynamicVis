@@ -104,7 +104,7 @@ If you find this project helpful, please give us a star ⭐️. Your support is 
 
 We recommend using Miniconda for installation. The following commands will create a virtual environment named `dynamicvis` and install PyTorch and MMCV. The default CUDA version in these instructions is **12.1**. Modify accordingly if using a different CUDA version.
 
-<details open>
+<details>
 
 **Step 0**: Install [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install).
 
@@ -177,7 +177,7 @@ cd DynamicVis
 
 ## Dataset Preparation
 
-<details open>
+<details>
 
 ### Pretraining Dataset
 
@@ -313,7 +313,7 @@ sh tools_mmpretrain/dist_test.sh configs_DynamicVis/UCMerced/name_to_config.py $
 
 ## FAQ
 
-<details open>
+<details>
 
 **Q1**: Should I install MM series packages?
 **A1**: No. We include all necessary components. Existing MM installations may cause conflicts.
