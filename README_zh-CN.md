@@ -122,9 +122,7 @@ Linux:
 
 ```shell
 pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
-```
-或者
-```shell
+# 或者
 conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
 
@@ -133,7 +131,7 @@ conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=
 ```shell
 pip install -U openmim
 mim install mmcv==2.2.0
-#或者
+# 或者
 pip install mmcv==2.2.0 -f https://download.openmmlab.com/mmcv/dist/cu121/torch2.4/index.html
 ```
 
@@ -189,7 +187,8 @@ cd DynamicVis
 
 ```shell
 pip install awscli
-
+# 删除aws配置文件
+rm -rf ~/.aws
 # 显示文件夹
 aws s3 ls --no-sign-request s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/
 
