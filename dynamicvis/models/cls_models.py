@@ -472,7 +472,7 @@ class DynamicVisBackbone(BaseBackbone):
                     reduction_ratio=spatial_token_keep_ratios[i],
                     norm_topk_prob=norm_topk_prob,
                     path_type=path_type,
-                    norm_cfg=norm_cfg,
+                    layer_norm_epsilon=1e-5,
                     layer_cfgs=layer_cfgs,
                     layer_idx=cur + idx,
                     sampling_scale=sampling_scale,
