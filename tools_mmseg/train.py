@@ -1,3 +1,6 @@
+import sys
+
+sys.path.append(sys.path[0] + '/..')
 # Copyright (c) OpenMMLab. All rights reserved.
 import argparse
 import logging
