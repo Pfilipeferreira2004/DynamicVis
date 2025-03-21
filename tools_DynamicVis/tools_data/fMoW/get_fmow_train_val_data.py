@@ -149,7 +149,6 @@ def save_as_tar(item):
 			'jpg': img_bytes,
 			'json': gt_data.encode('utf-8')
 		}
-		import ipdb; ipdb.set_trace()
 		sink.write(sample)
 		if idx_worker == 0:
 			pbar.update()
