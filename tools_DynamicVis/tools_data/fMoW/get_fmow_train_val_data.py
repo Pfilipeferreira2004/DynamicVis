@@ -149,6 +149,7 @@ def save_as_tar(item):
 			'jpg': img_bytes,
 			'json': gt_data
 		}
+		import ipdb; ipdb.set_trace()
 		sink.write(sample)
 		if idx_worker == 0:
 			pbar.update()
@@ -160,7 +161,7 @@ if __name__ == '__main__':
 	data_root = f'/mnt/search01/dataset/cky_data/fmow-rgb'
 	meta_data_save_dir = 'datainfo/fmow'
 	tar_save_dir = 'data/fmow'
-	n_process = 128  # n_process = n_shards
+	n_process = 0  # n_process = n_shards
 	n_shards = n_process
 
 	mmengine.mkdir_or_exist(meta_data_save_dir)
