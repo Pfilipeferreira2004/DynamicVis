@@ -30,7 +30,6 @@ randomness = dict(seed=None, deterministic=False)
 
 work_dir = 'work_dirs/fMoW/pretrain_dynamicvis_b_bf16_mamba'
 
-qs_cloud = 'nlp-ali'  # 'search01' or 'nlp-ali' or 'nj-larc'
 data_root = f'/mnt/nlp-ali/dataset/cky_data/fmow-rgb-tar'
 code_root = f'/mnt/nlp-ali/usr/chenkeyan/codes/dynamicvis'
 
@@ -43,6 +42,7 @@ pin_memory = True
 
 num_classes = 63
 img_size = 512
+val_interval = 10
 
 vis_backends = [dict(type='LocalVisBackend'),
                 dict(type='WandbVisBackend', init_kwargs=dict(project='dynamicvis', group='fMoW', name=work_dir.split('/')[-1]))
@@ -50,7 +50,7 @@ vis_backends = [dict(type='LocalVisBackend'),
 
 visualizer = dict(type='mmpretrain.UniversalVisualizer', vis_backends=vis_backends)
 
-train_cfg = dict(by_epoch=True, max_epochs=200, val_interval=10)
+train_cfg = dict(by_epoch=True, max_epochs=200, val_interval=val_interval)
 
 data_preprocessor = dict(
     type='DetDataPreprocessor',

@@ -62,13 +62,14 @@
 ## 更新日志
 
 🌟 **2025.03.20** 发布了 DynamicVis 项目。
+🌟 **2025.03.21** 更新了 DynamicVis 的预训练代码。
 
 
 ## TODO
 
-- [ ] 整理DynamicVis的预训练代码
-- [ ] 上传DynamicVis模型权重
+- [X] 整理DynamicVis的预训练代码
 - [ ] 整理论文中九个任务的微调和测试代码
+- [ ] 上传DynamicVis模型权重
 - [ ] 上传基于Mamba2开发的DynamicVis模型权重
 
 
@@ -279,19 +280,22 @@ ${DATASET_ROOT} # 数据集根目录，例如：/home/username/data/AID
 
 - `work_dir`：模型训练的输出路径，一般不需要修改。
 - `data_root`：数据集根目录，**修改为数据集根目录的绝对路径**。
+- `code_root`：代码根目录，**修改为代码根目录的绝对路径**。
 - `batch_size`：单卡的 batch size，**需要根据显存大小进行修改**。
 - `max_epochs`：最大训练轮数，一般不需要修改。
 - `val_interval`：验证集的间隔轮数，一般不需要修改。
 - `vis_backends/WandbVisBackend`：网络端可视化工具的配置，**打开注释后，需要在 `wandb` 官网上注册账号，可以在网络浏览器中查看训练过程中的可视化结果**。
-- `resume`: 是否断点续训，一般不需要修改。
 - `load_from`：模型的预训练的检查点路径，一般不需要修改。
-- `init_from`：模型的预训练的检查点路径，一般保持为None，除非需要断点续训，则需要修改为对应的检查点路径。
+- `resume`: 是否断点续训，一般不需要修改。
 - `default_hooks/CheckpointHook`：模型训练过程中的检查点保存配置，一般不需要修改。
 - `model/backbone`：DynamicVis模型的视觉骨干，**需要根据实际情况进行修改**。
-- `AMP training config`：混合精度训练的配置，一般不需要修改。
-- `dataset_type`：数据集的类型，一般不需要修改。
+- `model/backbone/arch`：主干网络的配置，**需要根据实际情况进行修改**。
+- `model/backbone/spatial_token_keep_ratios`：空间令牌保留比例，**需要根据实际情况进行修改**。
+- `model/pre_neck`：DynamicVis模型的FPN Neck。
+- `model/neck`: DynamicVis模型的区域特征提取器，一般不需要修改。
+- `model/head`：DynamicVis模型的分类头，一般不需要修改。
+- `optim_wrapper`：优化器的配置，一般不需要修改。
 - `data_preprocessor/mean/std`：数据预处理的均值和标准差，一般不需要修改。
-
 </details>
 
 
@@ -330,7 +334,9 @@ sh tools_mmpretrain/dist_test.sh configs_DynamicVis/fMoW/name_to_config.py ${CHE
 
 <details>
 
-XXX
+**参数解析**：
+
+- XX
 
 </details>
 
