@@ -98,7 +98,7 @@ class MambaBlock(BaseModule):
     ):
         super(MambaBlock, self).__init__(init_cfg=init_cfg)
         self.embed_dims = embed_dims
-        self.norm = MambaRMSNorm(self.embed_dims, eps=layer_norm_epsilon)
+        self.pre_norm = MambaRMSNorm(self.embed_dims, eps=layer_norm_epsilon)
 
         if mamba2:
             print('Using Mamba2Mixer')
