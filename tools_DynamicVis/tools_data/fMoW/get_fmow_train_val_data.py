@@ -156,7 +156,7 @@ def save_as_tar(item):
 
 
 if __name__ == '__main__':
-	data_root = f'/mnt/search01/dataset/cky_data/fmow-rgb/'
+	data_root = f'/mnt/search01/dataset/cky_data/fmow-rgb'
 	meta_data_save_dir = 'datainfo/fmow'
 	tar_save_dir = 'data/fmow'
 	n_process = 128  # n_process = n_shards
