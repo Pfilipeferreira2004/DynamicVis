@@ -50,42 +50,42 @@ def get_train_val_pairs(data_root, save_dir):
 		print(f'{split} list saved to {save_dir}/{split}.txt')
 		print(f'{len(file_pairs)} samples')
 
-		# cat the train, val, seq, test files to get the full list
-		test_files = mmengine.list_from_file(f'{save_dir}/test.txt')
-		random.shuffle(test_files)
-		# select 2W samples for test
-		test_set_2w = test_files[:20000]
-		with open(f'{save_dir}/test_2w_list.txt', 'w') as f:
-			for line in test_set_2w:
-				f.write(line+'\n')
-		print(f'test 2w list saved to {save_dir}/test_2w_list.txt')
-		print(f'{len(test_set_2w)} samples')
+	# cat the train, val, seq, test files to get the full list
+	test_files = mmengine.list_from_file(f'{save_dir}/test.txt')
+	random.shuffle(test_files)
+	# select 2W samples for test
+	test_set_2w = test_files[:20000]
+	with open(f'{save_dir}/test_2w_list.txt', 'w') as f:
+		for line in test_set_2w:
+			f.write(line+'\n')
+	print(f'test 2w list saved to {save_dir}/test_2w_list.txt')
+	print(f'{len(test_set_2w)} samples')
 
-		# cat the train, val, seq, test files to get the full list
-		pretrain_files = test_files[20000:]
-		for split in ['train', 'val', 'seq']:
-			pretrain_files += mmengine.list_from_file(f'{save_dir}/{split}.txt')
-		random.shuffle(pretrain_files)
-		with open(f'{save_dir}/pretrain_list.txt', 'w') as f:
-			for line in pretrain_files:
-				f.write(line+'\n')
-		print(f'pretrain list saved to {save_dir}/pretrain_list.txt')
-		print(f'{len(pretrain_files)} samples')
+	# cat the train, val, seq, test files to get the full list
+	pretrain_files = test_files[20000:]
+	for split in ['train', 'val', 'seq']:
+		pretrain_files += mmengine.list_from_file(f'{save_dir}/{split}.txt')
+	random.shuffle(pretrain_files)
+	with open(f'{save_dir}/pretrain_list.txt', 'w') as f:
+		for line in pretrain_files:
+			f.write(line+'\n')
+	print(f'pretrain list saved to {save_dir}/pretrain_list.txt')
+	print(f'{len(pretrain_files)} samples')
 
-		'''
-		train list saved to datainfo/pretrain/train.txt
-		727144 samples
-		val list saved to datainfo/pretrain/val.txt
-		106081 samples
-		test list saved to datainfo/pretrain/test.txt
-		106946 samples
-		seq list saved to datainfo/pretrain/seq.txt
-		107520 samples
-		test 2w list saved to datainfo/pretrain/test_2w.txt
-		20000 samples
-		pretrain list saved to datainfo/pretrain/pretrain.txt
-		1027691 samples
-		'''
+	'''
+	train list saved to datainfo/pretrain/train.txt
+	727144 samples
+	val list saved to datainfo/pretrain/val.txt
+	106081 samples
+	test list saved to datainfo/pretrain/test.txt
+	106946 samples
+	seq list saved to datainfo/pretrain/seq.txt
+	107520 samples
+	test 2w list saved to datainfo/pretrain/test_2w.txt
+	20000 samples
+	pretrain list saved to datainfo/pretrain/pretrain.txt
+	1027691 samples
+	'''
 
 max_edge = 1024
 resize_transform = Resize(scale=(max_edge, max_edge), keep_ratio=True)
