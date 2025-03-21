@@ -45,6 +45,7 @@ def get_train_val_pairs(data_root, save_dir):
 
 				file_pairs += list(zip(json_files, img_files))
 
+		import ipdb; ipdb.set_trace()
 		with open(f'{save_dir}/{split}.txt', 'w') as f:
 			for json_file, img_file in file_pairs:
 				f.write(f'{json_file.replace(data_root+"/", "")} {img_file.replace(data_root+"/", "")}\n')
