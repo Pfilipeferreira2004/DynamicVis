@@ -169,7 +169,7 @@ pip install mamba==2.2.4
 
 ```shell
 pip install transformers==4.49.0 
-pip install -U ipdb braceexpand mat4py pycocotools shapely ftfy scipy terminaltables
+pip install -U ipdb braceexpand mat4py pycocotools shapely ftfy scipy terminaltables wandb
 ```
 
 
