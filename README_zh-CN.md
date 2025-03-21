@@ -14,7 +14,7 @@
     <span style="font-size: 20px; ">项目主页</span>
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://arxiv.org/abs/2501.xx">
+  <a href="https://arxiv.org/abs/2503.16426">
     <span style="font-size: 20px; ">arXiv</span>
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -27,7 +27,7 @@
 
 [![GitHub stars](https://badgen.net/github/stars/KyanChen/DynamicVis)](https://github.com/KyanChen/DynamicVis)
 [![license](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-2501.xx-b31b1b.svg)](https://arxiv.org/abs/2501.xxx)
+[![arXiv](https://img.shields.io/badge/arXiv-2503.16426-b31b1b.svg)](https://arxiv.org/abs/2503.16426)
 
 <br>
 <br>
@@ -41,7 +41,7 @@
 
 ## 简介
 
-本项目仓库是论文 [DynamicVis: An Efficient and General Visual Foundation Model for Remote Sensing Image Understanding](https://arxiv.org/abs/2501.xxx) 的代码实现，基于 [OpenMMLab](https://openmmlab.com/codebase) 代码库进行开发。
+本项目仓库是论文 [DynamicVis: An Efficient and General Visual Foundation Model for Remote Sensing Image Understanding](https://arxiv.org/abs/2503.16426) 的代码实现，基于 [OpenMMLab](https://openmmlab.com/codebase) 代码库进行开发。
 
 遥感动态视觉感知大模型DynamicVis，通过选择性区域感知架构与多实例元嵌入学习，实现超大尺寸图像的高效低资源解析（2048x2048像素处理仅需800MB显存）。该模型在九大遥感下游任务中展现卓越性能，计算效率达ViT的~20倍且内存消耗降低~97%，为高分辨率遥感影像的跨任务理解提供支持。
 
@@ -382,7 +382,7 @@ sh tools_mmpretrain/dist_test.sh configs_DynamicVis/UCMerced/name_to_config.py $
 @article{chen2025dynamicvis,
   title={DynamicVis: An Efficient and General Visual Foundation Model for Remote Sensing Image Understanding},
   author={Chen, Keyan and and Liu, Chenyang and Chen, Bowen and Li, Wenyuan and Zou, Zhengxia and Shi, Zhenwei},
-  journal={arXiv preprint arXiv:2501.xxxx},
+  journal={arXiv preprint arXiv:2503.16426},
   year={2025}
 }
 ```

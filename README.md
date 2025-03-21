@@ -14,7 +14,7 @@
     <span style="font-size: 20px; ">Homepage</span>
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://arxiv.org/abs/2501.xx">
+  <a href="https://arxiv.org/abs/2503.16426">
     <span style="font-size: 20px; ">arXiv</span>
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -27,7 +27,7 @@
 
 [![GitHub stars](https://badgen.net/github/stars/KyanChen/DynamicVis)](https://github.com/KyanChen/DynamicVis)
 [![license](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-2501.xxx-b31b1b.svg)](https://arxiv.org/abs/2501.xxx)
+[![arXiv](https://img.shields.io/badge/arXiv-2503.16426-b31b1b.svg)](https://arxiv.org/abs/2503.16426)
 
 <br>
 <br>
@@ -41,7 +41,7 @@ English | [简体中文](README_zh-CN.md)
 
 ## Introduction
 
-This repository contains the official implementation of the paper [DynamicVis: An Efficient and General Visual Foundation Model for Remote Sensing Image Understanding](https://arxiv.org/abs/2501.xxx), developed based on the [OpenMMLab](https://openmmlab.com/codebase) framework.
+This repository contains the official implementation of the paper [DynamicVis: An Efficient and General Visual Foundation Model for Remote Sensing Image Understanding](https://arxiv.org/abs/2503.16426), developed based on the [OpenMMLab](https://openmmlab.com/codebase) framework.
 
 DynamicVis is a dynamic visual perception foundation model for remote sensing, achieving efficient low-resource parsing of ultra-large images (2048x2048 pixels processing requires only 800MB GPU RAM) through a selective region-aware architecture and multi-instance meta-embedding learning. The model demonstrates exceptional performance across nine remote sensing downstream tasks, with ~20x computational efficiency and ~97% memory reduction compared to ViT, enabling cross-task understanding of high-resolution remote sensing imagery.
 
@@ -328,7 +328,7 @@ If you use DynamicVis in your research, please cite:
 @article{chen2025dynamicvis,
   title={DynamicVis: An Efficient and General Visual Foundation Model for Remote Sensing Image Understanding},
   author={Chen, Keyan and Liu, Chenyang and Chen, Bowen and Li, Wenyuan and Zou, Zhengxia and Shi, Zhenwei},
-  journal={arXiv preprint arXiv:2501.xxxx},
+  journal={arXiv preprint arXiv:2503.16426},
   year={2025}
 }
 ```
