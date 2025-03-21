@@ -25,7 +25,7 @@ def get_train_val_pairs(data_root, save_dir):
 				recursive=True,
 				suffix='.json'
 			)
-			import ipdb;ipdb.set_trace()
+			json_files = list(json_files)
 			img_files = [x.replace('.json', '.jpg') for x in json_files]
 			file_pairs = list(zip(json_files, img_files))
 
