@@ -154,8 +154,8 @@ pip install mamba_ssm-2.2.4+cu12torch2.4cxx11abiTRUE-cp311-cp311-linux_x86_64.wh
 **步骤 4**：安装其他依赖项。
 
 ```shell
-pip install 
-pip install ipdb -U
+pip install transformers==4.49.0 
+pip install -U ipdb braceexpand
 ```
 
 
