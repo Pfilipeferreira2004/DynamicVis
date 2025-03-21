@@ -192,6 +192,9 @@ val_evaluator = dict(
     num_classes=num_classes,
 )
 test_evaluator = val_evaluator
+val_cfg = dict()
+test_cfg = dict()
+
 base_lr = 0.0004
 
 param_scheduler = [

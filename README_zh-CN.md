@@ -150,12 +150,26 @@ wget https://github.com/state-spaces/mamba/releases/download/v2.2.4/mamba_ssm-2.
 pip install mamba_ssm-2.2.4+cu12torch2.4cxx11abiTRUE-cp311-cp311-linux_x86_64.whl
 ```
 
+注意： 如果使用时出现问题，可以尝试使用 `pip install` 安装。
+
+```shell
+pip install causal-conv1d==1.5.0.post8
+pip install mamba==2.2.4
+
+# 或者
+# 先编译再安装，可以将whl保留，下次安装时直接使用免除编译
+# pip wheel --wheel-dir=../../software/mamba2-2.4.4/ causal-conv1d==1.5.0.post8 -i https://pypi.org/simple
+# pip wheel --wheel-dir=../../software/mamba2-2.4.4/ mamba-ssm==2.2.4 -i https://pypi.org/simple
+# pip install ../../software/mamba2-2.4.4/causal_conv1d-1.5.0.post8-cp311-cp311-linux_x86_64.whl
+# pip install ../../software/mamba2-2.4.4/mamba_ssm-2.2.4-cp311-cp311-linux_x86_64.whl
+```
+
 
 **步骤 4**：安装其他依赖项。
 
 ```shell
 pip install transformers==4.49.0 
-pip install -U ipdb braceexpand
+pip install -U ipdb braceexpand mat4py pycocotools shapely ftfy scipy terminaltables
 ```
 
 
