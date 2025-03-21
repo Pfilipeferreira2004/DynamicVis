@@ -47,7 +47,7 @@ def get_train_val_pairs(data_root, save_dir):
 
 		with open(f'{save_dir}/{split}.txt', 'w') as f:
 			for json_file, img_file in file_pairs:
-				f.write(f'{json_file.replace(data_root, "")} {img_file.replace(data_root, "")}\n')
+				f.write(f'{json_file.replace(data_root+"/", "")} {img_file.replace(data_root+"/", "")}\n')
 		print(f'{split} list saved to {save_dir}/{split}.txt')
 		print(f'{len(file_pairs)} samples')
 
@@ -74,7 +74,7 @@ def get_train_val_pairs(data_root, save_dir):
 	print(f'{len(pretrain_files)} samples')
 
 	'''
-	train list saved to datainfo/pretrain/train.txt
+	train list saved to datainfo/fmow/train.txt
 	727144 samples
 	val list saved to datainfo/pretrain/val.txt
 	106081 samples
