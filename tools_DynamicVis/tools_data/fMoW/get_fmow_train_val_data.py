@@ -168,6 +168,7 @@ if __name__ == '__main__':
 	# get train, val, test, seq pairs list
 	get_train_val_pairs(data_root, meta_data_save_dir)
 
+	input("Press Enter to continue...")
 	# save as tar
 	for train_test_file in ['pretrain_list.txt', 'test_2w_list.txt']:
 		out_dir_tmp = f'{tar_save_dir}/{os.path.splitext(train_test_file)[0]}'
