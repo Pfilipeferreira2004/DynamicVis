@@ -147,7 +147,7 @@ def save_as_tar(item):
 		sample = {
 			'__key__': img_name,
 			'jpg': img_bytes,
-			'json': gt_data
+			'json': gt_data.encode('utf-8')
 		}
 		import ipdb; ipdb.set_trace()
 		sink.write(sample)
