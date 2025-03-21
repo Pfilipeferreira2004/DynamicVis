@@ -38,11 +38,11 @@ def get_train_val_pairs(data_root, save_dir):
 
 				json_files = glob.glob(f'{data_root}/{input_folder}/*.json')
 				img_file_folder = f'{data_root}/{output_folder}'
-
-				json_files_name = [os.path.basename(x) for x in json_files]
-				json_files_name_suffix = [x.replace(os.path.basename(os.path.dirname(input_folder)), os.path.basename(output_folder)) for x in json_files_name]
-				img_file_names = [x.replace('.json', '.jpg') for x in json_files_name_suffix]
+				img_file_names = [
+					os.path.basename(x).replace('.json', '.jpg').replace(os.path.basename(os.path.dirname(x)), os.path.basename(output_folder)) \
+					for x in json_files]
 				img_files = [f'{img_file_folder}/{x}' for x in img_file_names]
+
 				file_pairs += list(zip(json_files, img_files))
 
 		with open(f'{save_dir}/{split}.txt', 'w') as f:
