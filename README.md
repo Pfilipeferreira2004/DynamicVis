@@ -63,6 +63,7 @@ If you find this project helpful, please give us a star ⭐️. Your support is 
 ## Changelog
 
 🌟 **2025.03.20** Released DynamicVis project.
+
 🌟 **2025.03.21** Updated DynamicVis pretraining code.
 
 
@@ -319,11 +320,10 @@ sh tools_mmpretrain/dist_test.sh configs_DynamicVis/fMoW/name_to_config.py ${CHE
 
 #### Config Files
 
-我们提供了论文中的 UC Merced 和 AID 数据集的配置文件，你可以在 [UC 配置文件](configs_DynamicVis/UCMerced) 和 [AID 配置文件](configs_DynamicVis/AID) 文件夹中找到它们。
+
 We provide configuration files for the UC Merced and AID datasets mentioned in the paper. You can find them in the [UC configuration file](configs_DynamicVis/UCMerced) and [AID configuration file](configs_DynamicVis/AID) folders.
 
 
-下面是一些除了预训练部分Config参数外的主要参数解析。
 The following are some key parameter explanations other than the pretraining part of the Config.
 
 <details>
